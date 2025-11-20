@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Butterflies Puzzle — CSS Grid & Flexbox</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      color: #333;
+      padding: 1rem;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #b2ebf2;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    /* Grid Layout */
+    .grid-layout {
+      display: grid;
+      grid-template-areas:
+        "info puzzle"
+        "details puzzle";
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+
+    .info {
+      grid-area: info;
+      background-color: #f1f8e9;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .puzzle {
+      grid-area: puzzle;
+      background-color: #fff3e0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .details {
+      grid-area: details;
+      background-color: #ede7f6;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Flexbox Puzzle Container */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    /* Puzzle Pieces */
+    .piece {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Hidden Trick Piece */
+    .hidden {
+      display: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .grid-layout {
+        grid-template-areas:
+          "info"
+          "puzzle"
+          "details";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Butterflies Puzzle</h1>
+  </header>
+
+  <main class="grid-layout">
+    <!-- Section 1: Puzzle Info -->
+    <section class="info">
+      <h2>Your Info</h2>
+      <p><strong>Name:</strong> Raggy</p>
+      <p><strong>Chosen Puzzle:</strong> Butterflies</p>
+      <p><strong>Assignment Date:</strong> <time datetime="2025-11-19">November 19, 2025</time></p>
+    </section>
+
+    <!-- Section 2: Puzzle Image -->
+    <section class="puzzle">
+      <h2>Completed Puzzle</h2>
+      <div class="flex-container">
+        <!-- Puzzle pieces -->
+        <img src="D:\images\puzzle1.jpg" alt="Piece 2" class="piece" />
+        <img src="D:\images\puzzle2.jpg" alt="Piece 3" class="piece" />
+        <img src="D:\images\puzzle3.jpg" alt="Piece 4" class="piece" />
+        <img src="D:\images\puzzle4.jpg" alt="Piece 5" class="piece" />
+        <img src="D:\images\puzzle5.jpg" alt="Piece 6" class="piece" />
+        <img src="D:\images\puzzle6.jpg" alt="Piece 7" class="piece" />
+        <img src="D:\images\puzzle7.jpg" alt="Piece 8" class="piece" />
+        <img src="D:\images\puzzle8.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle9.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle10.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle11.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle12.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle13.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle14.jpg" alt="Piece 9" class="piece" />
+        <img src="D:\images\puzzle15.jpg" alt="Piece 9" class="piece" /> \
+        <img src="D:\images\puzzle16.jpg" alt="Piece 1" class="piece" />
+
+        <!-- Hidden trick piece -->
+        <img src="D:\images\puzzleWRONG.jpg" alt="Extra piece" class="piece hidden" />
+   </body>
+</html>
